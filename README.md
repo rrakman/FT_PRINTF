@@ -35,7 +35,7 @@ file, and the `libftprintf/libftprintf.a` specifies the location of the
 ft_printf library file.
 
 You can then use the `ft_printf` function in your code as follows:
-
+"""
 #include "ft_printf.h"
 
 int main(int argc, char **argv) {
@@ -44,3 +44,4 @@ ft_printf("This is a test of the ft_printf function.\n");
 ft_printf("argc = %d, argv[0] = %s\n", argc, argv[0]);
 return 0;
 }
+"""
