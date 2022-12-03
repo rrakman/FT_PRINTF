@@ -6,12 +6,11 @@
 /*   By: rrakman <rrakman@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 03:47:29 by rrakman           #+#    #+#             */
-/*   Updated: 2022/11/08 16:39:02 by rrakman          ###   ########.fr       */
+/*   Updated: 2022/12/03 16:35:32 by rrakman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include<stdarg.h>
 
 int	add(char *args, ... )
 {
@@ -27,10 +26,10 @@ int	add(char *args, ... )
 	va_end(ap);
 	return (sum);
 }
-#include<stdio.h>
+
 int main ()
 {
-	ft_putstr("Helloworld!!");
-	ft_putchar('\n');
-	//printf("add2 = %d", add(5",2,2,1,100,80));
+	int i = 'M';
+	printf("%X",i);
+	//printf("add2 = %d", add(5,2,2,1,100,80));
 }
