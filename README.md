@@ -33,15 +33,3 @@ This will compile `my_program.c` and link it with the ft_printf library. The
 `-Ilibftprintf/includes` option specifies the location of the ft_printf header
 file, and the `libftprintf/libftprintf.a` specifies the location of the
 ft_printf library file.
-
-You can then use the `ft_printf` function in your code as follows:
-"""
-#include "ft_printf.h"
-
-int main(int argc, char **argv) {
-ft_printf("Hello, world!\n");
-ft_printf("This is a test of the ft_printf function.\n");
-ft_printf("argc = %d, argv[0] = %s\n", argc, argv[0]);
-return 0;
-}
-"""
