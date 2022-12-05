@@ -9,7 +9,7 @@ OBJS = $(SRC:.c=.o)
 all: $(NAME)
 
 ${NAME}:${OBJS}
-	ar rc ${NAME} ${OBJS}
+	@ar rc ${NAME} ${OBJS}
 
 clean:
 	@rm -f $(OBJS)

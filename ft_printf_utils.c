@@ -6,7 +6,7 @@
 /*   By: rrakman <rrakman@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 23:18:17 by rrakman           #+#    #+#             */
-/*   Updated: 2022/12/03 16:38:47 by rrakman          ###   ########.fr       */
+/*   Updated: 2022/12/05 02:21:02 by rrakman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,13 +61,3 @@ int	ft_putnbr(int n)
 	return(count);
 }
 
-int	ft_puthex(unsigned int n)
-{
-	int nb;
-
-	if (nb < 16)
-	{
-		nb = ft_puthex(n/16);
-		
-	}
-}

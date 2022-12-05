@@ -6,30 +6,50 @@
 /*   By: rrakman <rrakman@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 03:47:29 by rrakman           #+#    #+#             */
-/*   Updated: 2022/12/03 16:35:32 by rrakman          ###   ########.fr       */
+/*   Updated: 2022/12/05 02:57:33 by rrakman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	add(char *args, ... )
+int	ft_printf(char *format, ... )
 {
-	va_list ap;
-	va_start(ap, args);
-	int i = 0;
-	int sum = 0;
-	while (i < 2)
+	va_list args;
+	va_start(args, format);
+	
+	int i;
+	int count;
+	
+	count = 0;
+	i = 0;
+	while (format[i] != '\0')
 	{
-		sum += va_arg(ap,int);
-		i++;
+		if (format[i] == '%')
+		{
+			i++;
+			if(format[i] == 'c') {
+				count += ft_putchar(va_arg(args,int));
+			}
+			else if(format[i] == 's') {
+				count += ft_putstr(va_arg(args,char *));
+			}
+			else if(format[i] == 'd' || format[i] == 'i') {
+				count += ft_putnbr(va_arg(args,int));
+			}
+			else if(format[i] == '%') {
+				count += ft_putchar('%');
+			}
+			i++;
+		}
+		else {
+			count += ft_putchar(format[i++]);
+		}
 	}
-	va_end(ap);
-	return (sum);
+	va_end(args);
+	return (count);
 }
 
-int main ()
-{
-	int i = 'M';
-	printf("%X",i);
-	//printf("add2 = %d", add(5,2,2,1,100,80));
-}
+// int main()
+// {
+// 	ft_printf("Helllo bios %s %c %d %i %%","Hello",'z',69);
+// }
