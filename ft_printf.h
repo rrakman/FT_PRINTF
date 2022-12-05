@@ -6,7 +6,7 @@
 /*   By: rrakman <rrakman@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/26 01:49:07 by rrakman           #+#    #+#             */
-/*   Updated: 2022/12/03 15:38:59 by rrakman          ###   ########.fr       */
+/*   Updated: 2022/12/05 18:34:57 by rrakman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,7 @@ int	ft_putchar(char c);
 int	ft_strlen(const char *s);
 int ft_putstr(char *s);
 int	ft_putnbr(int n);
+int	ft_printhex(unsigned int nb, char c);
+static int	ft_hex(unsigned int num, char c);
 
 # endif
