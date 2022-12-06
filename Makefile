@@ -2,7 +2,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 NAME = libftprintf.a
-SRC = ft_printf.c ft_printf_utils.c 
+SRC = ft_printf.c ft_printf_utils.c ft_printf_utils2.c 
 
 OBJS = $(SRC:.c=.o)
 
