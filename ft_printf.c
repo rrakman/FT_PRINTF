@@ -6,7 +6,7 @@
 /*   By: rrakman <rrakman@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 03:47:29 by rrakman           #+#    #+#             */
-/*   Updated: 2022/12/06 20:26:30 by rrakman          ###   ########.fr       */
+/*   Updated: 2022/12/06 20:51:04 by rrakman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_handle(va_list args, char c)
 {
 	int	count;
-	
+
 	count = 0;
 	if (c == 'c')
 		count += ft_putchar(va_arg(args, int));
@@ -31,6 +31,7 @@ int	ft_handle(va_list args, char c)
 		count += ft_putptr(va_arg(args, void *));
 	else if (c == '%')
 		count += ft_putchar('%');
+	return (count);
 }
 
 int	ft_printf(char *format, ...)
@@ -47,7 +48,7 @@ int	ft_printf(char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			count += ft_handle(args,format[i]);
+			count += ft_handle(args, format[i]);
 			i++;
 		}
 		else
